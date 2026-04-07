@@ -17,7 +17,7 @@ Pull the repository files and within the repository follow the steps below.
 
 Create the `certs` directory.
 ```
-certs
+mkdir certs
 ```
 
 Generate OpenSSL certificates for the project.
