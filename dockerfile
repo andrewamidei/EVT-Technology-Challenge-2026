@@ -20,3 +20,7 @@ COPY nginx/nginx.conf /etc/nginx/conf.d/
 
 # Copy html files into correct directory
 COPY /html /var/www/html
+
+HEALTHCHECK --start-period=30s CMD nginx -t \
+&& curl --fail --cacert ../ssl/localhost.crt https://localhost \
+|| exit 1
