@@ -15,6 +15,6 @@ RUN apk add --no-cache openssl && \
 
 # Remove default nginx configuration and add our custom configuration
 RUN rm /etc/nginx/conf.d/default.conf
-COPY nginx.conf /etc/nginx/conf.d/
+COPY nginx/nginx.conf /etc/nginx/conf.d/
 
 COPY /html /var/www/html
