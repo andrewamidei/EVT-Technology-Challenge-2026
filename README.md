@@ -18,6 +18,8 @@ Navigate to the project directory and run the script `run.sh`.
 This script builds the image and names it `local_nginx` and starts a 
 container named `webserver`.
 
+On the same device, navigate to `localhost` in your web browser to see the website with a self-signed certificate.
+
 ### Cleaning before rebuilding image
 Navigate to the project directory and run the script `clean.sh`.
 ```
@@ -26,7 +28,6 @@ Navigate to the project directory and run the script `clean.sh`.
 This script stops the `webserver` container, removes it, and deletes
 the `local_nginx` image.
 
-On the same device, navigate to `localhost` in your web browser to see the website with a self-signed certificate.
 ## For development
 
 ### Environment setup
