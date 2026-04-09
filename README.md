@@ -1,14 +1,14 @@
 # EVT-Technology-Challenge-2026
 
 ## What is this?
-This repository contains a containerized nginx web server with a Dockerfile and Docker Compose. Alongside this is a simple configuration for a self-signed certificate and some simple scripts to help run and clean up the environment quickly. Finally, the HTML itself hosted on the site is an introduction of myself and a showcase of some of my recent projects.
+This repository contains a containerized nginx web server with a Dockerfile and Docker Compose. Alongside this is a simple configuration for a self-signed certificate and some simple scripts to help run and clean up the environment quickly. Finally, the HTML itself hosted on the site is an introduction and a showcase of some of my recent projects.
 
 ## Why these tools?
 Fundamentally, I built this on Docker. I have used Docker for over four years, and I've found that tools such as a web server are handled well in this environment. Additionally, the benefits of having the ability to move cross-platform work very well for my development/deployment environments. The tool that runs the website is Nginx, which I chose to use due to its wide adoption, speed, and utility. I have never used Nginx as a web server before, and I can say that I would consider using it again.
 
 ## Prerequisites
-- This project uses docker so you must have docker installed on any system you choose to run this service on. 
-- The scripts below are built for a linux environment. You may need to change how you type your command if you are using wsl.
+- This project uses Docker so you must have Docker installed on any system you choose to run this service on. 
+- The scripts below are built for a Linux environment. You may need to change how you type your commands if you are using wsl.
 
 ## One command run
 Navigate to the project directory and run the script `run.sh`.
@@ -26,11 +26,11 @@ Navigate to the project directory and run the script `clean.sh`.
 This script stops the `webserver` container, removes it, and deletes
 the `local_nginx` image.
 
-On the same device navigate to `localhost` in your web browser to see the website with a self signed certificate.
+On the same device, navigate to `localhost` in your web browser to see the website with a self-signed certificate.
 ## For development
 
 ### Environment setup
-Pull the repository files and within the repository follow the steps below.
+Pull the repository files, and within the repository, follow the steps below.
 
 Create the `certs` directory.
 ```
@@ -47,12 +47,12 @@ openssl req -x509 -nodes -days 365 \
 ```
 
 ### Running Webserver
-Boot up container.
+Boot up the container.
 ```
 docker compose up -d
 ```  
 
-On the same device navigate to `localhost` in your web browser to see the website with a self signed certificate.
+On the same device, navigate to `localhost` in your web browser to see the website with a self-signed certificate.
 
 Check compose logs.
 ```
